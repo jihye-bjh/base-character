@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터 커스터마이저</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>나만의 캐릭터 만들기</h1>
+        
+        <div class="character-display">
+            <!-- 캐릭터가 표시될 영역 -->
+            <div id="character">
+                <img id="base" src="images/base-character.png">
+                <img id="hair" src="images/hair/hair-1.png">
+                <img id="makeup" src="images/makeup/no-makeup.png">
+                <img id="clothes" src="images/clothes/outfit-1.png">
+            </div>
+        </div>
+        
+        <div class="customization-options">
+            <!-- 머리 스타일 옵션 -->
+            <div class="option-section">
+                <h2>머리 스타일</h2>
+                <div class="color-options">
+                    <button onclick="changeHairColor('black')" class="color-btn black"></button>
+                    <button onclick="changeHairColor('brown')" class="color-btn brown"></button>
+                    <button onclick="changeHairColor('blonde')" class="color-btn blonde"></button>
+                    <button onclick="changeHairColor('red')" class="color-btn red"></button>
+                </div>
+                <div class="style-options">
+                    <button onclick="changeHairStyle(1)">스타일 1</button>
+                    <button onclick="changeHairStyle(2)">스타일 2</button>
+                </div>
+            </div>
+            
+            <!-- 화장 옵션 -->
+            <div class="option-section">
+                <h2>화장</h2>
+                <button onclick="changeMakeup('none')">화장 없음</button>
+                <button onclick="changeMakeup('natural')">내추럴</button>
+                <button onclick="changeMakeup('glamour')">글래머</button>
+            </div>
+            
+            <!-- 의상 옵션 -->
+            <div class="option-section">
+                <h2>의상</h2>
+                <button onclick="changeClothes(1)">의상 1</button>
+                <button onclick="changeClothes(2)">의상 2</button>
+                <button onclick="changeClothes(3)">의상 3</button>
+            </div>
+        </div>
+        
+        <button id="save-btn">내 캐릭터 저장하기</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
